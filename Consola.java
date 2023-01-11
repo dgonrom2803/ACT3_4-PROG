@@ -9,6 +9,7 @@ public class Consola implements Imprimible, Borrable {
 
     @Override
     public void establecerContenido(String contenido) {
+
         System.out.printf("%S", contenido + " " + pantalla);
     }
 

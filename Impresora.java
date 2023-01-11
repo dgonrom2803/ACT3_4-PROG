@@ -1,7 +1,11 @@
 package Interfaz;
 
 public class Impresora implements Imprimible, Borrable{
-    String pagina = TEXTO_POR_DEFECTO;
+    String pagina;
+
+    Impresora(){
+        pagina = Imprimible.TEXTO_POR_DEFECTO;
+    }
 
     @Override
     public void imprime() {
@@ -10,11 +14,13 @@ public class Impresora implements Imprimible, Borrable{
 
     @Override
     public void establecerContenido(String contenido) {
+
         System.out.println(contenido);
     }
 
     @Override
     public void borrar() {
+        pagina = " ";
         System.out.println(" ");
     }
 }
